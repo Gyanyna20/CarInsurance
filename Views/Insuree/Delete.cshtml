@@ -1,0 +1,12 @@
+@model CarInsurance.Models.Insuree
+@{ ViewBag.Title = "Delete Insuree"; }
+<h2>Delete Insuree</h2>
+<p>Are you sure you want to delete this insuree?</p>
+<p><strong>@Model.FirstName @Model.LastName</strong> — @Model.EmailAddress</p>
+<p>Monthly quote: @Model.Quote.ToString("C")</p>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.Hidden("id", Model.Id)
+    <button class="btn" type="submit">Confirm Delete</button>
+}
+<p>@Html.ActionLink("Back to List", "Index")</p>

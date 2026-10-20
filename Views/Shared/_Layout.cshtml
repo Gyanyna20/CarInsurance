@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - CarInsurance</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem auto; max-width: 1100px; padding: 0 1rem; color: #222; }
+        nav a { margin-right: 1rem; } table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+        th, td { border: 1px solid #ddd; padding: .55rem; text-align: left; } th { background: #f2f2f2; }
+        label { display: block; margin-top: .7rem; font-weight: bold; } input, select { padding: .4rem; max-width: 28rem; width: 100%; }
+        input[type=checkbox] { width: auto; } .btn { display: inline-block; margin-top: .8rem; padding: .45rem .8rem; border: 1px solid #999; text-decoration: none; background: #f7f7f7; color: #111; }
+        .error { color: #a00; } footer { margin-top: 2rem; color: #666; }
+    </style>
+</head>
+<body>
+    <nav>
+        @Html.ActionLink("CarInsurance", "Index", "Insuree")
+        @Html.ActionLink("Insurees", "Index", "Insuree")
+        @Html.ActionLink("Admin Quotes", "Admin", "Insuree")
+    </nav>
+    <hr />
+    @RenderBody()
+    <footer><p>CarInsurance assignment project</p></footer>
+</body>
+</html>

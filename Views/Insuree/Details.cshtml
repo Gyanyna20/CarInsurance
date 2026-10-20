@@ -1,0 +1,15 @@
+@model CarInsurance.Models.Insuree
+@{ ViewBag.Title = "Insuree Details"; }
+<h2>Insuree Details</h2>
+<dl>
+    <dt>First Name</dt><dd>@Model.FirstName</dd>
+    <dt>Last Name</dt><dd>@Model.LastName</dd>
+    <dt>Email Address</dt><dd>@Model.EmailAddress</dd>
+    <dt>Date of Birth</dt><dd>@Model.DateOfBirth.ToString("g")</dd>
+    <dt>Car</dt><dd>@Model.CarYear @Model.CarMake @Model.CarModel</dd>
+    <dt>DUI</dt><dd>@Model.DUI</dd>
+    <dt>Speeding Tickets</dt><dd>@Model.SpeedingTickets</dd>
+    <dt>Full Coverage</dt><dd>@Model.CoverageType</dd>
+    <dt>Monthly Quote</dt><dd>@Model.Quote.ToString("C")</dd>
+</dl>
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) | @Html.ActionLink("Back to List", "Index")</p>
