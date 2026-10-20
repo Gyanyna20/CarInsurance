@@ -1,21 +1,77 @@
-# CarInsurance MVC 5 project
+Car Insurance
 
-This is a classic ASP.NET MVC 5 project targeting .NET Framework 4.7.2.
+Overview
 
-## Open and run
-1. Extract the ZIP to a normal writable folder.
-2. Open `CarInsurance.sln` in Visual Studio (not the `.csproj` as a file).
-3. Ensure Visual Studio has the **ASP.NET and web development** workload and the **.NET Framework 4.7.2 targeting pack** installed.
-4. Right-click the `CarInsurance` project and choose **Restore NuGet Packages** if prompted.
-5. Build with **Build > Build Solution**.
-6. Right-click `CarInsurance` > **Set as Startup Project**, then press F5.
+An ASP.NET MVC web application that calculates monthly car insurance quotes based on personal details, vehicle information, and driving history.
 
-## Database
-The app uses Entity Framework 6 Code First and LocalDB:
-`(LocalDB)\MSSQLLocalDB`, database `CarInsuranceDb`.
-The first database access should create the database and `Insurees` table automatically. Make sure SQL Server Express LocalDB is installed. If your class assignment specifically requires a physical `.mdf` and `.ldf` file to submit, locate the generated database in SQL Server Object Explorer and use its properties / SQL Server tooling to determine its files.
+Features
 
-## Notes
-- The `Quote` is calculated by the controller and is not entered by the user.
-- The Admin page lists first name, last name, email address, and quote.
-- This project cannot install Visual Studio workloads or LocalDB automatically; those are machine prerequisites.
+Add and manage customer records.
+
+Calculate monthly insurance quotes.
+
+Apply pricing rules based on age, car details, speeding tickets, DUI history, and coverage type.
+
+View all insurance quotes on the Admin page.
+
+Store data in a SQL Server LocalDB database.
+
+Quote Calculation
+
+Base price: $50 per month.
+
+Age 18 or under: +$100.
+
+Age 19–25: +$50.
+
+Age 26 or older: +$25.
+
+Car made before 2000 or after 2015: +$25.
+
+Porsche: +$25.
+
+Porsche 911 Carrera: an additional $25.
+
+Each speeding ticket: +$10.
+
+DUI history: +25% of the current total.
+
+Full coverage: +50% of the current total.
+
+Technologies
+
+C#
+
+ASP.NET MVC 5
+
+Entity Framework 6
+
+.NET Framework 4.7.2
+
+SQL Server LocalDB
+
+HTML and Razor
+
+How to Run
+
+Clone or download the repository.
+
+Open CarInsurance.sln in Visual Studio.
+
+Restore NuGet packages.
+
+Make sure SQL Server LocalDB is installed.
+
+Build the solution.
+
+Set CarInsurance as the startup project.
+
+Press F5 to run the application.
+
+Database
+
+The application uses Entity Framework Code First and SQL Server LocalDB. The connection is configured in Web.config, and the database is named CarInsuranceDb.
+
+Purpose
+
+This project demonstrates ASP.NET MVC, database integration, CRUD operations, and automatic insurance quote calculations.
